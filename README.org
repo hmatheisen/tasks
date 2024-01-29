@@ -19,10 +19,11 @@ the described command as an ~async-shell-command~.
 **** Mandatory
 
 - ~:command~: The shell command to run
-- ~:project-path~: Where to run the shell command
 
 **** Optional
 
+- ~:project-path~: Where to run the shell command, default to the current
+  directory instead
 - ~:description~: The descritpion of the interactive function.  Can be useful if
   you use Marginalia.
 - ~:async~: Default to ~true~ but can be set to ~nil~ if you need to run
