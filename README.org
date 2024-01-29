@@ -28,3 +28,8 @@ the described command as an ~async-shell-command~.
   you use Marginalia.
 - ~:async~: Default to ~true~ but can be set to ~nil~ if you need to run
   ~shell-command~ instead.
+
+*** Project integration
+
+If a ~:project-path~ corresponds to a project used by emacs's ~project.el~ you
+can easily lists the commands it this project with ~C-x p C-t~.
