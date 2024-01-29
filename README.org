@@ -1,1 +1,29 @@
-#+TITLE: Tasks
+* Tasks
+
+Define common tasks (shell commands) to be run in a specific project.
+
+** Usage
+
+#+begin_src emacs-lisp
+  (define-task rails-db-migrate
+    :command "bundle exec rails db:migrate"
+    :project-path "~/Code/my-rails-project"
+    :description "Run rails db:migrate in my rails project")
+#+end_src
+
+This will create an interactive function ~rails-db-migrate~ that will run the
+the described command as an ~async-shell-command~.
+
+*** Available params
+
+**** Mandatory
+
+- ~:command~: The shell command to run
+- ~:project-path~: Where to run the shell command
+
+**** Optional
+
+- ~:description~: The descritpion of the interactive function.  Can be useful if
+  you use Marginalia.
+- ~:async~: Default to ~true~ but can be set to ~nil~ if you need to run
+  ~shell-command~ instead.
